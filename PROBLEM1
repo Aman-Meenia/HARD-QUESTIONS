@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int minNumberOperations(vector<int>& v) {
+        int start=v[0];
+        int size=v.size();
+        int ans=start;
+       for(int i=1; i<size; i++){
+         if(v[i]>start){
+            ans+=v[i]-start; 
+         }
+           start=v[i];
+       }
+   return ans;
+    }
+};
